@@ -14,6 +14,15 @@ git clone <repo-url> ~/my-setup
 ~/my-setup/install.sh
 ```
 
+По умолчанию скиллы ставятся в `~/.config/agents/skills`. Если на машине клиент
+читает скиллы из другого пути:
+
+```sh
+~/my-setup/install.sh --skills-dir ~/.agents/skills
+# или сокращённо:
+~/my-setup/install.sh --agents
+```
+
 `install.sh` делает симлинки из репо в `~/.kimi-code/AGENTS.md` и `~/.config/agents/skills/`.
 Существующие файлы переименовываются в `*.bak`. Скрипт идемпотентен — повторный запуск безопасен.
 
